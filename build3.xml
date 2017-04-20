@@ -1,0 +1,9 @@
+<project name="copying" default="copy">
+  <target name="copy">
+		<echo message="copying files"/>
+		<copy file="D:\Hello\Hi.txt" tofile="D:\Hello\myfiles\charan.txt" />
+		<copy file="D:\Hello\myfiles\Hello.txt" todir="D:\Hello" />
+		<!-- <copy todir="D:/Hello">
+			<fileset todir="D:/ -->
+	</target>
+</project>

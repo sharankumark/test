@@ -1,0 +1,10 @@
+<project name="moving" default="move">
+	<target name="move">
+		<echo message="moving files" />
+		<move file="D:\Hello\Hi.txt" tofile="D:\Hello\myfiles\charan.txt" />
+		<move file="D:\Hello\myfiles\Hello.txt" todir="D:\Hello" />
+		<move todir="D:\Build" >
+			<fileset dir="D:\Hello"/>
+		</move>
+	</target>
+</project>
