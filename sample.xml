@@ -1,0 +1,8 @@
+<project name="sample" basedir="." default="init">
+	
+	<target name="init">
+		<echo message="zipping the source" />
+		<!-- <zip basedir="Build" destfile="HelloWorld.zip" /> -->
+		<unzip src="HelloWorld.zip" dest="HelloWorld" />
+	</target>
+</project>

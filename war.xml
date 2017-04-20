@@ -1,0 +1,20 @@
+<project name="warproject" basedir="." default="all">
+
+     <target name="init">
+	     <echo message="initializing the prrocess" />
+	</target>
+	
+	<target name="compile" depends="init" >
+	    <echo message="compilinng the source" />
+		<mkdir dir="Build" />
+		<mkdir dir="Build/classes" />
+	</target>
+	
+	<target name="war" depends="compile" >
+	    <echo message="creating war"/>
+		<war basedir="Build/classes" destfile="Build/Helloworld.war" needxmlfile="false" />
+	</target>
+	
+	<target name="all" depends="war" />
+	
+</project>

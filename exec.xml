@@ -1,0 +1,12 @@
+<project name="execution" default="env" >
+
+<property name="browser" location="C:\Program Files (x86)\Internet Explorer\iexplore.exe" />
+<property name="file" location="D:\ANT_Workspace\Build\build.xml" />
+
+	<target name="env" >
+		<exec executable="${browser}" spawn="true" >
+			<arg value="${file}" />
+		</exec>
+	</target>
+	
+</project>
