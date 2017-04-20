@@ -1,0 +1,11 @@
+<project name="sample" default="C" >
+	<target name="A" >
+     <echo> Hellow India </echo>
+	</target>
+	<target name="B" >
+	  <echo> Hi there </echo>
+	</target>
+	<target name="C" depends="A, B">
+	<echo> Hellow Gdmng </echo>
+	</target>	
+</project>
