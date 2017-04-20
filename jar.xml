@@ -1,0 +1,27 @@
+<project name="java" basedir="." default="init">
+
+	<target name="clean">
+		<echo message="cleaning the process" />
+		<delete dir="Build" />
+	</target>
+	
+	<target name="compile" depends="clean" >
+		<echo message="compiling the source" />
+		<mkdir dir="Build" />
+		<mkdir dir="Build/classes" />
+		<javac srcdir="src" destdir="Build/classes" />
+	</target>
+	
+	<target name="jar" depends="compile" >
+		<echo message="creatig jar" />
+		<jar basedir="Build/classes" destfile="Build/HelloWorld.jar" />
+	</target>
+	
+	<target name="run" depends="jar" >
+		<echo message="running the jar" />
+		<java jar="Build/HelloWorld.jar" fork="true" />
+	</target>
+	
+	<target name="all" depends="run" />
+
+</project>
